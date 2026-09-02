@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createGreeting</title>
+  </head>
+  <body>
+    <script>
+      function myName(firstName, lastName) {
+        return `${firstName} ${lastName}`;
+      }
+      function getGreeting(timeOfDay) {
+        if (timeOfDay === "morning") {
+          return "Good morning";
+        } else if (timeOfDay === "afternoon") {
+          return "Good afternoon";
+        } else if (timeOfDay === "evening") {
+          return "Good evening";
+        } else {
+          return "good day";
+        }
+
+      }
+
+      function createGreeting(firstName, lastName, timeOfDay) {
+        const Greeting = myName(firstName, lastName);
+        const timeOf = getGreeting(timeOfDay);
+        return `${timeOf} ${Greeting} have a lovely day `;
+      }
+
+      console.log(createGreeting("Ava", "Stone", "morning"));
+    </script>
+  </body>
+</html>
